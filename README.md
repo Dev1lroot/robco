@@ -1,3 +1,4 @@
 # RobCo Industries (TM) Terminal Emulator
-A Terminal Emulator of Fallout 4 game, written in Nim Language
-RobCo trademarks copyright by Bethesda Softworks
+The emulator of the RobCo OS from Fallout 4
+
+The trademarks RobCo and RobCo Industries are owned by Bethesda Softworks All rights reserved.
