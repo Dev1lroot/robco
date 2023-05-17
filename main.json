@@ -1,0 +1,105 @@
+{
+    "main":{
+        "name":"Example Terminal - Main Menu",
+        "data": [
+            {
+                "name": "System",
+                "page": "system"
+            },
+            {
+                "name": "Journals",
+                "page": "journals"
+            },
+            {
+                "name": "Software",
+                "page": "software"
+            },
+            {
+                "name": "Control Center",
+                "page": "control"
+            }
+        ]
+    },
+    "control":{
+        "name": "Example Terminal - Control Center",
+        "hack": {
+            "pass": "OUTPUT",
+            "data":["RESULT","SOURCE","SCORGE","OUTPUT","FIELDS","PARAMS","ERRORS","STATUS","MANAGE","FORMAT"]
+        },
+        "data": [
+            {
+                "name": "Shutdown",
+                "exec": "TASKKILL /F /IM console.exe /T"
+            },
+            {
+                "name": "Goto MS DOS",
+                "exec": "cmd"
+            }
+        ]
+    },
+    "journals": {
+        "name": "Example Terminal - Journals",
+        "data": [
+            {
+                "name": "Journal of Dev1lroot",
+                "page": "davys_journal"
+            }
+        ]
+    },
+    "davys_journal": {
+        "name": "Example Terminal - Journals - Dev1lroot",
+        "data": [],
+        "hack": {
+            "pass": "FIELDS",
+            "data":["RESULT","SOURCE","SCORGE","OUTPUT","FIELDS","PARAMS","ERRORS","STATUS","MANAGE","FORMAT"]
+        },
+        "text": "row1\nrow2\nrow3"
+    },
+    "software": {
+        "name":"Example Terminal - The Software",
+        "data":[
+            {
+                "name": "Basic",
+                "page": "basic_software"
+            },
+            {
+                "name": "Work",
+                "page": "work_software"
+            },
+            {
+                "name": "Games",
+                "page": "games"
+            }
+        ]
+    },
+    "basic_software": {
+        "name":"Example Terminal - Basic Software",
+        "data":[
+            {
+                "name":"Browser",
+                "exec":"msedge"
+            },
+            {
+                "name":"Calculator",
+                "exec":"calc"
+            }
+        ]
+    },
+    "games": {
+        "name":"Games",
+        "hack": {
+            "pass": "TEST",
+            "data":["TEST","DECK","BASE","TASK","TEAR","DUST","BACK"]
+        },
+        "data":[
+            {
+                "name":"Fallout 4",
+                "exec":"\"C:\\Users\\nitro5\\Desktop\\Fallout 4.lnk\""
+            },
+            {
+                "name":"No Man's Sky",
+                "exec":"\"C:\\Users\\nitro5\\Desktop\\NMS.lnk\""
+            }
+        ]
+    }
+}
