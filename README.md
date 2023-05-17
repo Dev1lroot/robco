@@ -23,7 +23,7 @@ Documentation:
 - - hack.data // words presented in bytes showcase 0x0000 .... 0xFFFF
 
 Build:
-- ```nim c -d:release robco.nim```
+- ```nim c -d:release termlink.nim```
 
 Run with custom config:
 - ```termlink custom_config_path.json```
