@@ -22,4 +22,12 @@ Documentation:
 - - hack.pass // password
 - - hack.data // words presented in bytes showcase 0x0000 .... 0xFFFF
 
+Build:
+```nim c -d:release robco.nim```
+
+Compatablity:
+- Windows NT (ALL)
+- MS DOS (Not tested but probably)
+- Linux (W.I.P.)
+
 The trademarks RobCo and RobCo Industries are owned by Bethesda Softworks All rights reserved.
