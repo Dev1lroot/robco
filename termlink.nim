@@ -14,6 +14,31 @@ when defined(windows):
 # TODO 
 
 
+# Create main.json if does not exist
+if not fileExists("main.json"):
+  var define = %*{
+    "main": {
+      "name": "Example Terminal - Page 1",
+      "data": [
+        {
+          "name": "Goto Page 2",
+          "page": "two"
+        },
+        {
+          "name": "Run an example program",
+          "exec": "calc"
+        }
+      ]
+    },
+    "two": {
+      "name": "Example Terminal - Page 2",
+      "text": "Welcome to the empty page 2",
+      "data": []
+    }
+  }
+  writeFile("main.json",define.pretty)
+
+
 # Predefinitions
 var letter     = -1
 var screen     = "main"
