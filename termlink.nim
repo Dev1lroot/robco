@@ -1,4 +1,4 @@
-import os, terminal, winlean, sequtils, unicode, json, system, rdstdin, strutils
+import os, terminal, winlean, sequtils, unicode, json, system, rdstdin, strutils, marshal
 
 # capture keyboard on windows
 when defined(windows):
@@ -14,8 +14,13 @@ when defined(windows):
 # TODO 
 
 
+var file = "main.json"
+
+if paramCount() == 1:
+  file = paramStr(1)
+
 # Create main.json if does not exist
-if not fileExists("main.json"):
+if not fileExists(file):
   var define = %*{
     "main": {
       "name": "Example Terminal - Page 1",
@@ -36,7 +41,7 @@ if not fileExists("main.json"):
       "data": []
     }
   }
-  writeFile("main.json",define.pretty)
+  writeFile(file,define.pretty)
 
 
 # Predefinitions
@@ -45,7 +50,7 @@ var screen     = "main"
 var message    = ""
 var cursor_pos = -1
 var page       = "main"
-var data       = json.parseJSON(readFile("main.json"))
+var data       = json.parseJSON(readFile(file))
 var options    = data[page]["data"];
 var title      = data[page]["name"].getStr();
 var attempts   = 3
